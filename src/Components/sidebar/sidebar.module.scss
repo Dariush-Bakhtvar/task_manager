@@ -1,0 +1,88 @@
+@import '../../asset/Style/mixin';
+@import '../../asset/Style/variable';
+.sidebar {
+    width: 18%;
+    height: 100%;
+    // color: #ccc;
+    color: rgba($color: #ccc, $alpha: 0.8);
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 80px 70px 1fr 150px;
+    overflow: hidden;
+}
+
+.Logo {
+    font-size: 1.8rem;
+    color: #fff;
+    @include flex(flex-start, center);
+    span {
+        margin-left: 4px;
+    }
+}
+
+.search {
+    @include flex(space-between, center);
+    input[type='text'] {
+        margin-left: 4px;
+        width: 90%;
+        background: transparent;
+        color: inherit;
+        border: none;
+        padding-left: 2px;
+        border-radius: 3px;
+        &:focus {
+            outline: none;
+        }
+        &::placeholder {
+            color: inherit;
+        }
+    }
+}
+
+.taskBarMenu {
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1.4rem;
+    width: 100%;
+    // height: 100px;
+    @include flex(space-around, flex-start, column);
+    li {
+        display: flex;
+        align-items: baseline;
+        cursor: pointer;
+        span {
+            margin-left: 10px;
+        }
+        &:hover {
+            color: rgba($color: #fff, $alpha: 0.8);
+        }
+        &:active {
+            color: rgba($color: #fff, $alpha: 0.8);
+        }
+    }
+}
+
+.profile {
+    align-self: end;
+    @include flex(space-around, center);
+    img {
+        width: 25%;
+        height: 30%;
+        border-radius: 50%;
+    }
+    p {
+        font-family: 'Vazirmatn', sans-serif;
+        font-size: 1.1rem;
+        &:first-child {
+            font-size: 1.4rem;
+            color: #fff;
+        }
+    }
+}
+
+// @media screen and (max-width:768px) {
+//     .sidebar {
+//         width: 5%;
+//         padding: 1%;
+//         overflow: hidden;
+//     }
+// }

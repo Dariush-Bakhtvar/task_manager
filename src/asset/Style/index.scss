@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&family=Vazirmatn:wght@300&display=swap');
+@import './mixin';
+:root {
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+}
+
+input {
+    font-family: inherit;
+}
+
+body {
+    background: url(../Img/bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    @include flex(center,
+    center);
+    // font-family: 'Vazirmatn', sans-serif;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 1.6rem;
+    color: rgba($color: #ccc, $alpha: 0.8);
+}

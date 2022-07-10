@@ -1,0 +1,10 @@
+@import 'variable';
+.container {
+    width: 95%;
+    height: 570px;
+    background: rgba($color: $black, $alpha: 0.3);
+    margin: 2% 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
