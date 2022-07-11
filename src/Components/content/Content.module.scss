@@ -39,6 +39,22 @@
     }
 }
 
+.TasksContainer {
+    width: 100%;
+    height: 78%;
+    // background-color: dodgerblue;
+    padding: 0 1%;
+}
+
+.createList {
+    width: 275px;
+    height: 50px;
+}
+
+.createListBtn {
+    width: 100%;
+}
+
 // @media screen and (max-width:768px) {
 //     .TaskContent {
 //         width: 95%;
