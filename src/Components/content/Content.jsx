@@ -2,7 +2,7 @@ import style from './Content.module.scss';
 import { RiUserFill } from 'react-icons/ri'
 import { IoFilter } from 'react-icons/io5';
 import { RiMoreFill } from 'react-icons/ri';
-import { TiTimes } from 'react-icons/ti'
+import { FaTimes } from 'react-icons/fa'
 const Content = () => {
   return (
     <section className={style.TaskContent}>
@@ -29,8 +29,8 @@ const Content = () => {
           </button>
           <div className={style.ListNamePopUp}>
             <input type="text" placeholder='Insert List Name' />
-            <button>add List</button>
-            <span><TiTimes /></span>
+            <button>Add</button>
+            <span><FaTimes /></span>
           </div>
         </div>
       </section>
