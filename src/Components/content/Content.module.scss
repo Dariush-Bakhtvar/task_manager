@@ -61,6 +61,7 @@
     border: none;
     border-radius: 4px;
     font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .ListNamePopUp {
@@ -79,6 +80,8 @@
         padding: 2px;
         &:focus {
             color: #fff;
+            border: 1px solid #04519d;
+            outline: 1px solid #fff;
         }
     }
     button {
@@ -103,7 +106,6 @@
         right: 4px;
         font-size: 1.6rem;
         cursor: pointer;
-        color: #fff;
     }
 }
 

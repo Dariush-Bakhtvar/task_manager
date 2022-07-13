@@ -3,7 +3,13 @@ import { RiUserFill } from 'react-icons/ri'
 import { IoFilter } from 'react-icons/io5';
 import { RiMoreFill } from 'react-icons/ri';
 import { FaTimes } from 'react-icons/fa'
+import { useState, useRef } from 'react';
+import { useTask, useTaskAction } from '../Provider/Provider';
 const Content = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const getListName = useRef("");
+  const Tasks = useTask();
+  const dispatch = useTaskAction();
   return (
     <section className={style.TaskContent}>
       <nav className={style.TaskContentMenu}>
@@ -24,14 +30,16 @@ const Content = () => {
       </nav>
       <section className={style.TasksContainer}>
         <div className={style.createList}>
-          <button className={style.createListBtn}>
+          <button className={style.createListBtn} onClick={() => setIsOpen(true)}>
             Add List
           </button>
-          <div className={style.ListNamePopUp}>
-            <input type="text" placeholder='Insert List Name' />
-            <button>Add</button>
-            <span><FaTimes /></span>
-          </div>
+          {
+            isOpen && <div className={style.ListNamePopUp}>
+              <input type="text" placeholder='Insert List Name' ref={getListName} />
+              <button onClick={() => dispatch({ type: 'addList', value: getListName.current.value })}>Add</button>
+              <span onClick={() => setIsOpen(false)}><FaTimes /></span>
+            </div>
+          }
         </div>
       </section>
     </section>

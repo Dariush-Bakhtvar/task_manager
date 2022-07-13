@@ -30,6 +30,10 @@ input {
     font-family: inherit;
 }
 
+button {
+    cursor: pointer;
+}
+
 body {
     background: url(../Img/bg.jpg) no-repeat center center fixed;
     background-size: cover;
