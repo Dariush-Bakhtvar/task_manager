@@ -41,6 +41,11 @@ const Content = () => {
             </div>
           }
         </div>
+        {Tasks.map((item, key) => {
+          return <div key={key}>
+            {item}
+          </div>
+        })}
       </section>
     </section>
   )
