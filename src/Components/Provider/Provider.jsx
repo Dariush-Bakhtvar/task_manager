@@ -5,8 +5,8 @@ const initalState = [];
 const reducer = (state, action) => {
   switch (action.type) {
     case 'addList':
-      // state[`${action.value}`] = {};
-
+      state[`${action.value}`] = {}
+      console.log('test');
       return [];
     default:
       return state;
